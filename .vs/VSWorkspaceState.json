@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TvMazeAPI",
+    "\\TvMazeAPI\\TvMazeAPI",
+    "\\TvMazeAPI\\TvMazeAPI\\Core",
+    "\\TvMazeAPI\\TvMazeAPI\\Core\\Controllers",
+    "\\TvMazeAPI\\TvMazeAPI\\Core\\Model"
+  ],
+  "SelectedNode": "\\TvMazeAPI\\TvMazeAPI\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}
