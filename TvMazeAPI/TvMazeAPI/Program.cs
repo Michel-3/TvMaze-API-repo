@@ -1,8 +1,6 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TvMazeAPI.Repository;
+using TvMazeAPI.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,12 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 
+builder.Services.AddSingleton<RateLimiter>();
+builder.Services.AddSingleton<JsonDeserializer>();
+builder.Services.AddSingleton<TvShowValidator>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<TvMazeDbContext>(option =>
-option.UseSqlServer(builder.Configuration.GetConnectionString("TvMazeDb")));
+    option.UseSqlServer(builder.Configuration.GetConnectionString("TvMazeDb")));
 
 var app = builder.Build();
 

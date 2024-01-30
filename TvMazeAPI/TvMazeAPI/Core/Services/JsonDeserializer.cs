@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json;
 
 namespace TvMazeAPI.Core.Services
 {
@@ -6,7 +6,7 @@ namespace TvMazeAPI.Core.Services
     {
         public T Deserialize<T>(string json)
         {
-            return JsonConvert.DeserializeObject<T>(json);
+            return JsonSerializer.Deserialize<T>(json);
         }
     }
 }
