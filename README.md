@@ -1,4 +1,4 @@
-# Project Structure
+# TvMaze Structure
 
 This project follows a layered architecture to promote modularity, separation of concerns, and maintainability. The key layers are:
 
