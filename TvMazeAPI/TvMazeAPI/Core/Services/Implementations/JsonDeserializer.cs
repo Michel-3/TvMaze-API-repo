@@ -1,8 +1,9 @@
 ﻿using System.Text.Json;
+using TvMazeAPI.Core.Services.Interfaces;
 
-namespace TvMazeAPI.Core.Services
+namespace TvMazeAPI.Core.Services.Implementations
 {
-    public class JsonDeserializer
+    public class JsonDeserializer : IJsonDeserializer
     {
         public T Deserialize<T>(string json)
         {

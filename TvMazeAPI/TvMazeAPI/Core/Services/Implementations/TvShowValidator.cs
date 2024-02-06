@@ -1,6 +1,8 @@
-﻿namespace TvMazeAPI.Core.Services
+﻿using TvMazeAPI.Core.Services.Interfaces;
+
+namespace TvMazeAPI.Core.Services.Implementations
 {
-    public class TvShowValidator
+    public class TvShowValidator : ITvShowValidator
     {
         public (bool IsValid, string ErrorMessage) ValidateMonthAndYear(int month, int year)
         {

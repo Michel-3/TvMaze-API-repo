@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using TvMazeAPI.Core;
-
-namespace TvMazeAPI.Core.Models
+﻿namespace TvMazeAPI.Core.Models
 {
     public class ShowInfo
     {

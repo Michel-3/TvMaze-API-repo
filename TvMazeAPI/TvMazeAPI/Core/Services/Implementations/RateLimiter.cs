@@ -1,20 +1,19 @@
-﻿namespace TvMazeAPI.Core.Services
+﻿using TvMazeAPI.Core.Services.Interfaces;
+
+namespace TvMazeAPI.Core.Services.Implementations
 {
-    public class RateLimiter
+    public class RateLimiter : IRateLimiter
     {
         private readonly HttpClient _httpClient;
-        public RateLimiter(HttpClient httpClient) 
+        private const int rateLimitDelay = 500;
+        public RateLimiter(HttpClient httpClient)
         {
             _httpClient = httpClient;
             _httpClient.BaseAddress = new Uri("http://api.tvmaze.com/");
         }
-        public async Task Delay(int millisecondsDelay)
-        {
-            await Task.Delay(millisecondsDelay);
-        }
         public async Task<string> ApiRateLimiter(string apiUrl)
         {
-            await Task.Delay(500);
+            await Task.Delay(rateLimitDelay);
 
             var response = await _httpClient.GetStringAsync(apiUrl);
 
