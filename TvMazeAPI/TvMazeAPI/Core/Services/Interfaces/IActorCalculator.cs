@@ -1,4 +1,6 @@
-﻿namespace TvMazeAPI.Core.Services.Interfaces
+﻿using TvMazeAPI.Repository;
+
+namespace TvMazeAPI.Core.Services.Interfaces
 {
     public interface IActorCalculator
     {

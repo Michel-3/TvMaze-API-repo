@@ -11,7 +11,7 @@ using TvMazeAPI.Repository;
 namespace TvMazeAPI.Migrations
 {
     [DbContext(typeof(TvMazeDbContext))]
-    [Migration("20240131110600_InitialCreate")]
+    [Migration("20240206125747_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
