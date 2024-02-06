@@ -13,9 +13,10 @@ builder.Services.AddHttpClient();
 builder.Services.AddSingleton<IRateLimiter, RateLimiter>();
 builder.Services.AddSingleton<IJsonDeserializer, JsonDeserializer>();
 builder.Services.AddSingleton<ITvShowValidator, TvShowValidator>();
-builder.Services.AddScoped<IDataCheckService, DataCheckService>();
+builder.Services.AddScoped<IDatabaseCheckService, DatabaseCheckService>();
 builder.Services.AddScoped<IActorCalculator, ActorCalculator>();
 builder.Services.AddScoped<ActorRepository>();
+builder.Services.AddScoped<IApiDataService, ApiDataService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

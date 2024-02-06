@@ -5,11 +5,11 @@ using TvMazeAPI.Repository;
 
 namespace TvMazeAPI.Core.Services.Implementations
 {
-    public class DataCheckService : IDataCheckService
+    public class DatabaseCheckService : IDatabaseCheckService
     {
         private readonly TvMazeDbContext _dbContext;
 
-        public DataCheckService(TvMazeDbContext dbContext)
+        public DatabaseCheckService(TvMazeDbContext dbContext)
         {
             _dbContext = dbContext;
         }

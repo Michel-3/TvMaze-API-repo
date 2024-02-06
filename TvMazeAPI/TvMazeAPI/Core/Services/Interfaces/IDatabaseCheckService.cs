@@ -2,7 +2,7 @@
 
 namespace TvMazeAPI.Core.Services.Interfaces
 {
-    public interface IDataCheckService
+    public interface IDatabaseCheckService
     {
         Task<bool> MonthYearDataExistsAysnc(int year, int month);
         Task SaveShowInfoListAsync(List<ShowInfo> showInfoList);
