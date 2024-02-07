@@ -16,7 +16,7 @@ namespace TvMazeAPI.Core.Services.Implementations
         {
             var totalActors = await _actorRepository.GetTotalActors(month, year);
 
-            var actorPercentage = await _actorRepository.Calculatepercentage(month, year, totalActors);
+            var actorPercentage = await _actorRepository.CalculatePercentage(month, year, totalActors);
 
             return actorPercentage;
         }

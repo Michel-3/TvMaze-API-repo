@@ -25,7 +25,7 @@ namespace TvMazeAPI.Repository
             return totalActors;
         }
 
-        public async Task<IEnumerable<object>> Calculatepercentage(int month, int year, int totalActors)
+        public async Task<IEnumerable<object>> CalculatePercentage(int month, int year, int totalActors)
         {
             var topActors = await _dbContext.Actors
                 .Join(_dbContext.Shows,
