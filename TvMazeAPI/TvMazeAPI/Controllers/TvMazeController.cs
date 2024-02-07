@@ -30,7 +30,6 @@ namespace TvMaze.Controllers
             try
             {
                 var (isValid, errorMessage) = _validator.ValidateMonthAndYear(month, year);
-                var actorPercentages = await _actorCalculator.CalculateActorPercentagesAsync(month, year);
 
                 if (!isValid)
                 {
@@ -46,7 +45,10 @@ namespace TvMaze.Controllers
                     await _databaseCheckService.SaveShowInfoListAsync(showInfoList);
                 }
 
+                var actorPercentages = await _actorCalculator.CalculateActorPercentagesAsync(month, year);
+
                 return Ok(actorPercentages);
+
             }
             catch (HttpRequestException)
             {

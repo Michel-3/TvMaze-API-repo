@@ -44,7 +44,15 @@ namespace TvMazeAPI.Repository
                 .Take(10)
                 .ToListAsync();
 
-            return topActors.ToList();
+            var rankedActors = topActors.Select((actor, index) => new
+            {
+                Rank = index + 1,
+                actor.ActorId,
+                actor.Percentage,
+                actor.ActorName 
+            });
+
+            return rankedActors.ToList();
         }
     }
 }
