@@ -48,8 +48,10 @@ Follow these instructions to set up the project locally.
    cd TvMazeAPI
 3. Build the project
    dotnet build
-4. Run the application
-   dotnet run
+4. Create the intial database migration
+   dotnet ef migrations add InitialCreate --context TvMazeDbContext --output-dir Migrations
+5. Apply the database migration to update the database schema.
+   dotnet ef database update --context TvMazeDbContext
 
 ## Usage
 
