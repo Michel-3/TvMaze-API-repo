@@ -11,6 +11,7 @@ namespace TvMazeAPI.Repository
         {
             _dbContext = dbContext;
         }
+
         public async Task<int> GetTotalActors(int month, int year)
         {
             var totalActors = await _dbContext.Actors

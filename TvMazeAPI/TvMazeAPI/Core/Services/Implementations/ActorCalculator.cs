@@ -12,7 +12,7 @@ namespace TvMazeAPI.Core.Services.Implementations
             _actorRepository = actorRepository;
         }
 
-        public async Task<IEnumerable<object>> CalculateActorPercentagesAsync(int year, int month)
+        public async Task<IEnumerable<object>> CalculateActorPercentagesAsync(int month, int year)
         {
             var totalActors = await _actorRepository.GetTotalActors(month, year);
 
