@@ -44,14 +44,14 @@ Follow these instructions to set up the project locally.
 1. Clone the repository.
    ```bash
    git clone https://github.com/your-username/TvMazeAPI.git
-2. Navigate to the project folder.
-   cd TvMazeAPI
-3. Build the project
-   dotnet build
-4. Create the intial database migration
-   dotnet ef migrations add InitialCreate --context TvMazeDbContext --output-dir Migrations
-5. Apply the database migration to update the database schema.
-   dotnet ef database update --context TvMazeDbContext
+2. Navigate to the project folder.  
+   cd TvMazeAPI  
+4. Build the project  
+   dotnet build  
+5. Create the intial database migration  
+   dotnet ef migrations add InitialCreate --context TvMazeDbContext --output-dir Migrations  
+6. Apply the database migration to update the database schema.  
+   dotnet ef database update --context TvMazeDbContext  
 
 ## Usage
 
